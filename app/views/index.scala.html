@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>FeedMe Player</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/jquery.jplayer.min.js")" type="text/javascript"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+		 $(document).ready(function(){
+		  $("#jquery_jplayer_1").jPlayer({
+		   ready: function () {
+		    $(this).jPlayer("setMedia", {
+		     m4a: "http://assets.tobyandbryan.com/makingfriends/MakingFriends_Episode15_Celine_2.m4a"
+		    });
+		   },
+		   swfPath: "/javascripts",
+		   supplied: "m4a"
+		  });
+		 });
+		</script>
+		<div id="jquery_jplayer_1"></div>
+		<div id="jp_container_1">
+		 <a href="#" class="jp-play">Play</a>
+		 <a href="#" class="jp-pause">Pause</a>
+		</div>
+    </body>
+</html>
